@@ -1,0 +1,68 @@
+﻿@using ControlHoras.Models
+
+
+<div class="container" style="margin:auto">
+    <h2>Listado de Proyectos</h2>
+
+    <div>
+        @using (@Html.BeginForm("Proyectos", "Jefe", FormMethod.Post))
+        {
+            <table>
+                <tr>
+                    <td width="400px">
+                        <a href='@Url.Action("NuevoProyecto", "Jefe")'>
+                            <img src='@Url.Content("~/Imagenes/BtnNewProy.png")' width="180" height="40" />
+                        </a>
+                    </td>
+                    <td>
+                        <input type="text" name="cadena" class="form-control input-lg"/>
+                    </td>
+                    <td>
+                        <button class="btn btn-primary btn-lg btn-full" type="submit">Buscar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align:right">Buscar por: </td>
+                    <td colspan="2" style="text-align:right">
+                        @Html.RadioButton("criterio", "FechaInicio") Fecha Inicio
+                        @Html.RadioButton("criterio", "Responsable") Responsable
+                        @Html.RadioButton("criterio", "HorasReales") Horas
+                    </td>
+                </tr>
+            </table>
+        }
+    </div>
+
+    <table border="1" style="margin-top:20px">
+        <tr style="background-color:darkgray">
+            <th width="100px" style="text-align:center">INICIO</th>
+            <th width="100px" style="text-align:center">CIERRE</th>
+            <th width="300px" style="text-align:center">PROYECTO</th>
+            <th width="200px" style="text-align:center">RESPONSABLE</th>
+            <th width="100px" style="text-align:center">HORAS CONSUMIDAS</th>
+            <th width="100px" style="text-align:center"></th>
+            <th width="40px" style="text-align:center"></th>
+        </tr>
+        @foreach (Proyecto unProyecto in (List<Proyecto>)ViewBag.ListaProyectos)
+        {
+            <tr>
+                <td> @unProyecto.FechaInicio </td>
+                <td> @unProyecto.FechaCierreReal </td>
+                <td> @unProyecto.Nombre </td>
+                <td> @unProyecto.Responsable </td>
+                <td> @unProyecto.HorasReales h </td>
+                <td> 
+                    <a href='@Url.Action("Tareas", "Jefe", new {id=unProyecto.Nombre})'>
+                         <img src='@Url.Content("~/Imagenes/BtnTareas.png")' width="80" height="30"/>
+                     </a>
+                </td>
+                <td>
+                    <a href='@Url.Action("BorrarProyecto", "Jefe", new {id=unProyecto.Nombre})'>
+                        <img src='@Url.Content("~/Imagenes/BtnBorrar.png")' width="30" height="30" />
+                    </a>
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

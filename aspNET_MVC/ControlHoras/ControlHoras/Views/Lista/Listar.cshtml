@@ -1,0 +1,45 @@
+﻿@using (@Html.BeginForm("MostrarLista", "Lista", FormMethod.Post))
+{
+    <div>
+        @Html.ValidationSummary(true, "", new { @Class = "text-danger" })
+    </div>
+    <h2 style="text-align:center">Sacar Listado Tareas</h2>
+    <div style="background-color:darkgrey; width: 700px; margin:auto">
+        <table style="width: 700px ; background-color:darkgrey">
+            <tr>
+                <td colspan="2">
+                    <div class="form-group">
+                        @Html.Label("Proyecto:")
+                        @Html.DropDownList("proyecto", (IEnumerable<SelectListItem>)ViewBag.ListProyec, new { @class = "form-control" })
+                    </div>
+                </td>
+            <tr>
+                <td colspan="2"> @Html.Label("Tareas:")</td>
+            </tr>
+
+            <tr>
+                <td colspan="2">@Html.RadioButton("criterio", "Todo", new { @checked = "checked" }) Todas</td>
+            </tr>
+            <tr>
+                <td>@Html.RadioButton("criterio", "Tecnico") Tecnico:</td>
+                <td rowspan="3" style="width:400px">
+                    <input type="text" name="cadena" class="form-control input-lg" />
+                </td>
+            </tr>
+            <tr>
+                <td>@Html.RadioButton("criterio", "FechaInicio") Fecha de Inicio(dd/mm/yyyy):</td>
+            </tr>
+            <tr>
+                <td>@Html.RadioButton("criterio", "FechaFin") Fecha de Fin(dd/mm/yyyy):</td>
+            </tr>
+
+        </table>
+
+        <!-- Botones -->
+        <div class="form-group" style="text-align:center">
+            <button type="submit" class="btn btn-primary">Listar</button>
+        </div>
+
+    </div>
+
+}

@@ -1,0 +1,48 @@
+﻿@using ControlHoras.Models
+
+<div class="container" style="margin:auto">
+    <h2 style="text-align:center">Listado de Tareas</h2>
+
+
+    <table border="1" style="margin:auto; margin-top:20px">
+        <tr style="background-color:darkgray">
+            <th width="350px" style="text-align:center">TAREA</th>
+            <th width="100px" style="text-align:center">HORAS TOTALES TRABAJADAS</th>
+            <th colspan="2" width="140px" style="text-align:center">CONSULTAR MES</th>
+            
+        </tr>
+        @foreach (Tarea unaTarea in (List<Tarea>)ViewBag.ListaTareas)
+        {
+            <tr>
+                <td> @unaTarea.Nombre </td>
+                <td style="text-align:center"> @unaTarea.HorasReales h </td>
+                @using (@Html.BeginForm("MisHoras", "Emple", FormMethod.Post))
+                 {
+                    <td>
+                        @Html.DropDownList("mes", new SelectList( new List<Object>{
+                                                                    new { value = "1" , text = "Enero"  },
+                                                                    new { value = "2" , text = "Febrero"  },
+                                                                    new { value = "3" , text = "Marzo"  },
+                                                                    new { value = "4" , text = "Abril"  },
+                                                                    new { value = "5" , text = "Mayo"  },
+                                                                    new { value = "6" , text = "Junio"  },
+                                                                    new { value = "7" , text = "Julio"  },
+                                                                    new { value = "8" , text = "Agosto"  },
+                                                                    new { value = "9" , text = "Septiembre"  },
+                                                                    new { value = "10" , text = "Octubre"  },
+                                                                    new { value = "11" , text = "Noviembre"  },
+                                                                    new { value = "12" , text = "Diciembre"  },
+                                                                  }, "value", "text", 2), new { @class = "form-control" })
+                        <input id="tarea" name="tarea" type="hidden" value="@unaTarea.Nombre">
+                        <input id="proyecto" name="proyecto" type="hidden" value="@unaTarea.Proyecto">
+                        <input id="empleado" name="empleado" type="hidden" value="@unaTarea.Tecnico">
+                    </td>
+                        <td>
+                            <button class="btn btn-primary btn-lg btn-full" type="submit">+</button>
+                        </td>
+                 }
+            </tr>
+        }
+
+    </table>
+</div>

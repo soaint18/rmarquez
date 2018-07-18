@@ -1,0 +1,58 @@
+﻿@model ControlHoras.Models.Usuario
+
+@using (@Html.BeginForm("RegistroUsuario", "Home", FormMethod.Post))
+{
+    <div>
+        @Html.ValidationSummary(true, "", new { @Class = "text-danger" })
+    </div>
+
+    <div style="background-color:darkgrey; width: 700px; margin:auto">
+        <table style="width: 700px ; background-color:darkgrey">
+            <tr>
+                <td style="width: 300px">
+                    <!-- Nombre -->
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Nombre)
+                        @Html.TextBoxFor(model => model.Nombre, "", new { @class = "form-control" })
+                    </div>
+                </td>
+                <td style="width: 300px">
+                    <!-- Cargo -->
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Cargo)
+                        @Html.DropDownListFor(model => model.Cargo, new SelectList(
+                                                                         new List<Object>{
+                                                                                new { value = "programador" , text = "Programador"  },
+                                                                                new { value = "analista" , text = "Analista" },
+                                                                                new { value = "jefepro" , text = "Jefe de proyecto"}
+                                                                         }, "value", "text", 2), new { @class = "form-control" })
+
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 300px">
+                    <!-- Password -->
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Password)
+                        @Html.TextBoxFor(model => model.Password, "", new { @class = "form-control" })
+                    </div>
+                </td>
+                <td style="width: 300px">
+
+                </td>
+            </tr>
+        </table>
+
+        <!-- Botones -->
+        <div class="form-group" style="text-align:center">
+            <button type="submit" class="btn btn-primary">Guardar</button>
+            <a href='@Url.Action("Login", "Home")'>
+                <img src='@Url.Content("~/Imagenes/BtnCancelar.png")' width="80" height="35" />
+            </a>
+        </div>
+
+    </div>
+
+}
+

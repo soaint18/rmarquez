@@ -1,0 +1,61 @@
+﻿@model ControlHoras.Models.Tarea
+
+
+@using (@Html.BeginForm("NuevaTarea", "Jefe", FormMethod.Post))
+{
+    <div style="background-color:darkgrey; width: 700px; margin:auto">
+
+        <div>
+            @Html.ValidationSummary(true, "", new { @Class = "text-danger" })
+        </div>
+
+        <table style="width: 700px ; background-color:darkgrey">
+            <tr>
+                <td style="width: 300px">
+                    <!-- Nombre -->
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Nombre)
+                        @Html.TextBoxFor(model => model.Nombre, "", new { @class = "form-control" })
+                    </div>
+                </td>
+                <td style="width: 300px">
+                    <!-- Tecnico -->
+                    <div class="form-group">
+                        @Html.Label("Tecnico")
+                        @Html.DropDownList("Tecnico", (IEnumerable<SelectListItem>)ViewBag.ListUser, new { @class = "form-control" })
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <!-- Fecha Inicio -->
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.FechaInicio)
+                        @Html.TextBoxFor(model => model.FechaInicio, "", new { @class = "form-control", @placeholder = "dd/mm/yyyy" })
+                    </div>
+                </td>
+                <td>
+                    <!-- Horas Estimadas -->
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.HorasEstimadas)
+                        @Html.TextBoxFor(model => model.HorasEstimadas, "", new { @class = "form-control", @Value = "0" })
+                    </div>
+                </td>
+            </tr>
+            @Html.HiddenFor(model => model.Proyecto, new { @Value = ViewBag.proyecto })
+    
+        </table>
+
+        <!-- Botones -->
+        <div class="form-group" style="text-align:center">
+            <button type="submit" class="btn btn-primary">Guardar</button>
+            <a href='@Url.Action("Tareas", "Jefe", new { id = ViewBag.proyecto })'>
+                <img src='@Url.Content("~/Imagenes/BtnCancelar.png")' width="80" height="35" />
+            </a>
+        </div>
+
+    </div>
+
+}
+

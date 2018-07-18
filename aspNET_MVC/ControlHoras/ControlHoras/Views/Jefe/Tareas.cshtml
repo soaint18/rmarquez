@@ -1,0 +1,39 @@
+﻿@using ControlHoras.Models
+
+<div class="container" style="margin:auto">
+    <h2>Listado de Tareas del proyecto @ViewBag.proyecto</h2>
+
+    <div>
+        <a href='@Url.Action("NuevaTarea", "Jefe", new {id= @ViewBag.proyecto})'>
+            <img src='@Url.Content("~/Imagenes/BtnNewTask.png")' width="180" height="40" />
+        </a>
+    </div>
+
+    <table border="1" style="margin-top:20px">
+        <tr style="background-color:darkgray">
+            <th width="350px" style="text-align:center">TAREA</th>
+            <th width="100px" style="text-align:center">INICIO</th>
+            <th width="100px" style="text-align:center">CIERRE</th>
+            <th width="150px" style="text-align:center">TECNICO</th>
+            <th width="100px" style="text-align:center">HORAS ESTIMADAS</th>
+            <th width="40px" style="text-align:center"></th>
+        </tr>
+        @foreach (Tarea unaTarea in (List<Tarea>)ViewBag.ListaTareas)
+        {
+            <tr>
+                <td> @unaTarea.Nombre </td>
+                <td> @unaTarea.FechaInicio </td>
+                <td> @unaTarea.FechaFin </td>
+                <td> @unaTarea.Tecnico </td>
+                <td> @unaTarea.HorasReales h </td>
+                <td>
+                    <a href='@Url.Action("BorrarTarea", "Jefe", new {id=unaTarea.Nombre, pro=ViewBag.proyecto})'>
+                        <img src='@Url.Content("~/Imagenes/BtnBorrar.png")' width="30" height="30" />
+                    </a>
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+

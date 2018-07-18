@@ -1,0 +1,55 @@
+﻿@model ControlHoras.Models.Horas
+@using ControlHoras.Models
+@{ Horas Horas = @ViewBag.Horas; }
+
+<div class="container" style="margin:auto">
+    <h2 style="text-align:center">Mis Horas en "@Horas.Tarea" en @System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(Convert.ToInt16(@Horas.Mes)):</h2>
+
+
+    <table border="1" style="margin:auto; margin-top:20px">
+        <tr style="background-color:darkgray">
+            <th width="40px" style="text-align:center">DIA</th>
+            <th width="100px" style="text-align:center">HORAS TRABAJADAS</th>
+            <th width="200px" style="text-align:center">COMENTARIOS</th>
+            <th width="200px" style="text-align:center">OBSERVACIONES RESPONSABLE</th>
+            <th width="58px"></th>
+        </tr>
+    </table>
+        @{
+            int dias = System.DateTime.DaysInMonth(2018, Convert.ToInt16(@Horas.Mes));
+            int hoy = DateTime.Now.Day;
+            int __cont = 1;
+            foreach (Dias unDia in @Horas.Dias)
+            {
+                <form method="post" action="@Url.Action("ActualizarHoras", "Emple")">
+                   <input id="empleado" name="empleado" type="hidden" value="@Horas.Empleado">
+                   <input id="proyecto" name="proyecto" type="hidden" value="@Horas.Proyecto">
+                   <input id="tarea" name="tarea" type="hidden" value="@Horas.Tarea">
+                   <input id="mes" name="mes" type="hidden" value="@Horas.Mes">
+                    <table border="1" style="margin:auto">
+                        <tr>
+                            <td width="40px" style="text-align:center">
+                                @__cont
+                                <input id="dia" name="dia" type="hidden" value="@__cont">
+                            </td>
+                            <td width="100px" style="text-align:center">
+                                <input type="number" name="horas" value="@unDia.Horas" class="form-control" style="text-align:center" min="0" max="24" size="1" maxlength="2" />
+                            </td>
+                            <td width="200px">
+                                @Html.TextBox("comentario", "", new { @class = "form-control" })
+                            </td>
+                            <td width="200px">
+                                @Html.TextBox("observacion", "", new { @class = "form-control", @readonly = "readonly" })
+                            </td>
+                            <td width="50px">
+                                <button type="submit" class="btn"><img src="~/Imagenes/BtnSave.png" width="30" height="30" /></button>
+                            </td>
+                        </tr>
+                     </table>
+                </form>
+                if (__cont == dias) { break; }
+                __cont = __cont + 1;
+            }
+         }
+
+</div>

@@ -1,0 +1,42 @@
+﻿
+
+@using (@Html.BeginForm("Login", "Home", FormMethod.Post))
+{
+    <div>
+        @Html.ValidationSummary(true, "", new { @Class = "text-danger" })
+    </div>
+
+    <div style="background-color:darkgrey; width: 700px; margin:auto">
+        <table style="width: 700px ; background-color:darkgrey">
+            <tr>
+                <td style="width: 300px">
+                    <!-- Nombre -->
+                    <div class="form-group">
+                        @Html.Label("Nombre")
+                        @Html.TextBox("Nombre","", new { @class = "form-control" })
+                    </div>
+                </td>
+                <td style="width: 300px">
+                    <!-- Password -->
+                    <div class="form-group">
+                        @Html.Label("Password")
+                        @Html.TextBox("Password", "", new { @class = "form-control" })
+                    </div>
+                </td>
+            </tr>
+        </table>
+         
+        <!-- Botones -->
+        <div class="form-group" style="text-align:center">
+            <button type="submit" class="btn btn-primary">Entrar</button>
+            <a href='@Url.Action("RegistroUsuario", "Home")'>
+                <img src='@Url.Content("~/Imagenes/BtnRegistrarse.png")' width="80" height="35" />
+            </a>
+        </div>
+
+    </div>
+
+}
+
+
+

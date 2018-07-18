@@ -1,0 +1,85 @@
+﻿@model ControlHoras.Models.Proyecto
+
+
+@using (@Html.BeginForm("NuevoProyecto", "Jefe", FormMethod.Post))
+{
+    <div style="background-color:darkgrey; width: 700px; margin:auto">
+
+        <div>
+            @Html.ValidationSummary(true, "", new { @Class = "text-danger" })
+        </div>
+
+        <table style="width: 700px ; background-color:darkgrey">
+            <tr>
+                <td style="width: 300px">
+                    <!-- Nombre -->
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Nombre)
+                        @Html.TextBoxFor(model => model.Nombre, "", new { @class = "form-control"})
+                      </div>
+                </td>
+                <td style="width: 300px">
+                    <!-- Tipo -->
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Tipo)
+                        @Html.TextBoxFor(model => model.Tipo, "", new { @class = "form-control" })
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <!-- Cliente -->
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Cliente)
+                        @Html.TextBoxFor(model => model.Cliente, "", new { @class = "form-control" })
+                    </div>
+                </td>
+                <td>
+                    <!-- Responsable -->
+                    <div class="form-group">
+                        @Html.Label("Responsable")
+                        @Html.DropDownList("Responsable", (IEnumerable<SelectListItem>)ViewBag.ListUser, new { @class = "form-control" })
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <!-- Fecha Inicio -->
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.FechaInicio)
+                        @Html.TextBoxFor(model => model.FechaInicio, "", new { @class = "form-control", @placeholder = "dd/mm/yyyy" })
+                    </div>
+                </td>
+                <td>
+                    <!-- Fecha Estimada Cierre -->
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.FechaCierrePrevista)
+                        @Html.TextBoxFor(model => model.FechaCierrePrevista, "", new { @class = "form-control", @placeholder = "dd/mm/yyyy" })
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <!-- Observaciones -->
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Observaciones)
+                        @Html.TextAreaFor(model => model.Observaciones, 5, 600, new { @class = "form-control", @style = "resize: none" })
+                    </div>
+                </td>
+            </tr>
+            
+        </table>
+
+        <!-- Botones -->
+        <div class="form-group" style="text-align:center">
+           <button type="submit" class="btn btn-primary">Guardar</button>
+           <a href='@Url.Action("Proyectos", "Jefe")'>
+               <img src='@Url.Content("~/Imagenes/BtnCancelar.png")' width="80" height="35" />
+           </a>
+        </div>
+
+    </div>
+
+}

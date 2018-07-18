@@ -1,0 +1,26 @@
+﻿@using ControlHoras.Models
+
+<div class="container" style="margin:auto">
+    <h2 style="text-align:center">Listado de Proyectos Con Tareas Asignadas</h2>
+
+    <table border="1" style="margin:auto; margin-top:20px">
+        <tr style="background-color:darkgray">
+            <th width="350px" style="text-align:center">Proyecto</th>
+            <th width="100px" style="text-align:center">HORAS TRABAJADAS</th>
+            <th width="40px" style="text-align:center"></th>
+        </tr>
+        @foreach (Proyecto unProyecto in (List<Proyecto>)ViewBag.ListaProyectos)
+        {
+            <tr>
+                <td> @unProyecto.Nombre </td>
+                <td style="text-align:center"> @unProyecto.HorasReales h </td>
+                <td>
+                    <a href='@Url.Action("MisTareas", "Emple", new {id=unProyecto.Nombre})'>
+                        <img src='@Url.Content("~/Imagenes/BtnTareas.png")' width="80" height="30" />
+                    </a>
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
