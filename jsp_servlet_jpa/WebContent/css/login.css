@@ -1,0 +1,14 @@
+a {
+	color: red;
+}
+
+.boxlogin modal {
+	border: 0px solid #fff;
+	margin: 100px auto;
+	padding: 50px 60px;
+	width: 320px;
+	background: rgba(186,170,170,0.75);;
+	box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+	-webki-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+	-moz-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+}

@@ -1,0 +1,138 @@
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (1, 0, N'"ALIMENTACION"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (2, 0, N'"APERITIVOS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (3, 0, N'"BEBES"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (4, 0, N'"BEBIDAS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (5, 0, N'"CARNES"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (6, 0, N'"CHARCUTERIA"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (7, 0, N'"HOGAR"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (8, 0, N'"CONGELADOS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (9, 0, N'"DROGUERIA"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (10, 0, N'"FRUTAS Y VERDURAS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (11, 0, N'"HORNO Y BOLLERIA"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (12, 0, N'"LACTEOS Y BEBIDAS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (13, 0, N'"MASCOTAS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (14, 0, N'"PERFUMERIA"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (15, 0, N'"PESCADERIA"');
+
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (16, 1, N'"ALIÑOS Y CONDIMENTOS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (17, 1, N'"ARROZ Y LEGUMBRES"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (18, 1, N'"AZUCAR Y EDULCORANTES"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (19, 1, N'"CAFES E INFUSIONES"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (20, 1, N'"CEREALES"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (21, 1, N'"CONSERVAS DE PESCADO"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (22, 1, N'"CONSERVAS DULCES"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (23, 1, N'"CONSERVAS VEGETALES"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (24, 1, N'"DESAYUNO Y CACAOS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (25, 1, N'"GOLOSINAS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (26, 1, N'"HARINAS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (27, 1, N'"HUEVOS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (28, 1, N'"PASTAS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (29, 1, N'"PIZZAS, ROSCAS Y PAN"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (30, 1, N'"PLATOS PREPARADOS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (31, 1, N'"PREPARADOS POSTRE"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (32, 1, N'"SOPAS, CALDOS Y PURES"');
+
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (33, 2, N'"ACEITUNAS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (34, 2, N'"ENCURTIDOS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (35, 2, N'"FRUTOS SECOS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (36, 2, N'"GALLETAS SALADAS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (37, 2, N'"PAPAS Y SNACKS"');
+
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (38, 3, N'"ALIMENTACION INFANTIL"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (39, 3, N'"BAÑO"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (40, 3, N'"PAÑALES"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (41, 3, N'"PUERICULTURA"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (42, 3, N'"TOALLITAS"');
+
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (43, 4, N'"AGUAS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (44, 4, N'"BEBIDA BLANCA"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (45, 4, N'"BRANDY"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (46, 4, N'"CAVAS Y SIDRAS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (47, 4, N'"CERVEZAS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (48, 4, N'"CONCENTRADOS Y JARABES"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (49, 4, N'"ENERGETICOS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (50, 4, N'"ISOTONICOS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (51, 4, N'"LICORES"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (52, 4, N'"LICORES SIN ALCOHOL"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (53, 4, N'"REFRESCOS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (54, 4, N'"SANGRIAS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (55, 4, N'"VERMOUTH"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (56, 4, N'"VINOS BLANCOS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (57, 4, N'"VINOS ROSADOS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (58, 4, N'"VINOS TINTOS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (59, 4, N'"VINOS DE LICOR"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (60, 4, N'"VINOS ESPUMOSOS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (61, 4, N'"WHISKY Y BOURBON"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (62, 4, N'"ZUMOS Y NECTARES"');
+
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (63, 5, N'"ARREGLOS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (64, 5, N'"AVES"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (65, 5, N'"CASQUERIA"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (66, 5, N'"CERDO"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (67, 5, N'"CONEJO"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (68, 5, N'"CORDERO"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (69, 5, N'"ELABORADOS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (70, 5, N'"EMBUTIDOS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (71, 5, N'"HAMBURDUESAS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (72, 5, N'"VACUNO"');
+
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (73, 6, N'"AHUMADOS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (74, 6, N'"COCIDO"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (75, 6, N'"CURADO"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (76, 6, N'"QUESOS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (77, 6, N'"SALAZONES"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (78, 6, N'"SALCHICHAS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (79, 6, N'"UNTABLES"');
+
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (80, 7, N'"OTROS UTENSILIOS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (81, 7, N'"PAPEL REGALO"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (82, 7, N'"PILAS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (83, 7, N'"RECIPIENTES"');
+
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (84, 8, N'"COMIDA ASIATICA"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (85, 8, N'"FRUTAS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (86, 8, N'"HELADOS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (87, 8, N'"HIELO"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (88, 8, N'"MARISCO"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (89, 8, N'"PESCADO"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (90, 8, N'"PIZZAS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (91, 8, N'"PRECOCINADOS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (92, 8, N'"SALTEADOS Y ARROCES"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (93, 8, N'"VERDURAS"');
+
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (94, 9, N'"AMBIENTADORES"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (95, 9, N'"CALZADO"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (96, 9, N'"HIGIENE PERSONAL"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (97, 9, N'"DETERGENTE"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (98, 9, N'"INSECTICIDAS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (99, 9, N'"LIMPIADORES HOGAR"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (100, 9, N'"LEJIAS/LIQUIDOS FUERTES"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (101, 9, N'"UTILES DE LIMPIEZA"');
+
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (102, 10, N'"FRUTAS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (103, 10, N'"VERDURAS"');
+
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (104, 11, N'"BOLLERIA"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (105, 11, N'"CHOCOLATES"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (106, 11, N'"PAN Y GALLETAS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (107, 11, N'"PASTELERIA Y TARTAS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (108, 11, N'"SIN GLUTEN"');
+
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (109, 12, N'"BATIDOS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (110, 12, N'"LECHES"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (111, 12, N'"MANTEQUILLAS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (112, 12, N'"POSTRES"');
+
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (113, 13, N'"GATOS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (114, 13, N'"PERROS"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (115, 13, N'"OTROS"');
+
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (116, 14, N'"PERFUMES Y BELLEZA"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (117, 14, N'"CABELLO"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (118, 14, N'"COSMETICA"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (119, 14, N'"HIGIENE BUCAL"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (120, 14, N'"PARAFARMACIA"');
+
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (121, 15, N'"MARISCO"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (123, 15, N'"PESCADO FRESCO"');
+INSERT INTO [dbo].[Secciones] ([IdSeccion], [idSeccionPadre], [Nombre_Seccion]) VALUES (122, 15, N'"PESCADO SALADO"');

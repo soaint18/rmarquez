@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+	version="2.1">
+
+	<tlib-version>1.2</tlib-version>
+	<short-name>tagmio</short-name>
+
+	<tag>
+		<description>MasterPages</description>
+		<name>barraInicio</name>
+		<tag-class>etiquetas.inicio</tag-class>
+		<body-content>empty</body-content> 
+		<attribute>
+			<name>session</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	<tag>
+		<description>boostrap</description>
+		<name>boostrap</name>
+		<tag-class>etiquetas.boostrap</tag-class>
+		<body-content>empty</body-content>
+	</tag>
+
+</taglib>
