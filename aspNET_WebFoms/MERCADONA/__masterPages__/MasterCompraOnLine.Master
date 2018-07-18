@@ -1,0 +1,221 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterCompraOnLine.master.cs" Inherits="MerCadona.MasterCompraOnLine" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style type="text/css">
+        .style3 {
+            height: 41px;
+            width: 165px;
+        }
+
+        .style5 {
+            width: 837px;
+            height: 536px;
+        }
+
+        .style9 {
+            height: 41px;
+        }
+
+        .style13 {
+            height: 536px;
+            width: 165px;
+        }
+
+        .style15 {
+            width: 58px;
+        }
+
+        .style16 {
+            width: 128px;
+        }
+
+        .style17 {
+            height: 54px;
+        }
+
+        .style18 {
+            height: 498px;
+        }
+
+        .style20 {
+            height: 41px;
+            width: 219px;
+        }
+
+        .style21 {
+            height: 536px;
+            width: 219px;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form2" runat="server">
+        <div style="height: 732px; width: 1255px;">
+            <table style="width: 91%; background-color: #006633; height: 754px;">
+                <tr>
+                    <td class="style3">
+                        <asp:ImageButton ID="Image1" runat="server" ImageUrl="~/imagenes/imagenes_CompraOnline/buscadorAlimentos.png" />
+                    </td>
+                    <td class="style9">
+                        <asp:Button ID="BotonInicio" runat="server" BackColor="#006633" BorderColor="White"
+                            BorderStyle="Outset" Font-Bold="True" Font-Size="X-Small" ForeColor="#CCFFB5"
+                            Text="Inicio" Style="height: 20px" />
+                        <asp:Button ID="BotonDonde" runat="server" BackColor="#006633" BorderColor="White"
+                            BorderStyle="Outset" Font-Bold="True" Font-Size="X-Small" ForeColor="#CCFFB5"
+                            Text="¿Donde estamos?" Width="114px" Style="margin-left: 10px" />
+                        <asp:Button ID="BotonSeguridad" runat="server" BackColor="#006633" BorderColor="White"
+                            BorderStyle="Outset" Font-Bold="True" Font-Size="X-Small" ForeColor="#CCFFB5"
+                            Text="Seguridad" Style="margin-left: 10px" Width="96px" />
+                        <asp:Button ID="BotonCondGrales" runat="server" BackColor="#006633" BorderColor="White"
+                            BorderStyle="Outset" Font-Bold="True" Font-Size="X-Small" ForeColor="#CCFFB5"
+                            Text="Condiciones generales" Width="148px" Style="margin-left: 10px" />
+                        <asp:Button ID="BotonModDatos" runat="server" BackColor="#006633" BorderColor="White"
+                            BorderStyle="Outset" Font-Bold="True" Font-Size="X-Small" ForeColor="#CCFFB5"
+                            Text="Modificar Datos" Width="114px" Style="margin-left: 10px" />
+                        <asp:Button ID="BotonTramos" runat="server" BackColor="#006633" BorderColor="White"
+                            BorderStyle="Outset" Font-Bold="True" Font-Size="X-Small" ForeColor="#CCFFB5"
+                            Text="Tramos Entrega" Width="114px" Style="margin-left: 10px" />
+                        <asp:Button ID="BotonModPedido" runat="server" BackColor="#006633" BorderColor="White"
+                            BorderStyle="Outset" Font-Bold="True" Font-Size="X-Small" ForeColor="#CCFFB5"
+                            Text="Modificar Pedido" Width="104px" Style="margin-left: 10px" />
+                    </td>
+                    <td class="style20">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="style13"
+                        style="border-top-color: #FFCC00; border-top-style: solid; border-top-width: thick;">
+                        <div style="height: 682px; width: 179px">
+                            <div style="height: 420px">
+                                <div style="height: 21px; color: #CCFFB5; font-weight: bold; border-bottom-style: outset;">
+                                    Buscador
+                                </div>
+                                <div style="height: 3px; width: 181px">
+                                    <table style="width: 78%; height: 46px; color: #FFFFFF; font-size: small;">
+                                        <tr>
+                                            <td class="style15">Producto:</td>
+                                            <td class="style16">
+                                                <asp:TextBox ID="TextBoxProducto" runat="server" Width="85px"></asp:TextBox>
+                                            </td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="style15">Marca:</td>
+                                            <td class="style16">
+                                                <asp:TextBox ID="TextBoxMarca" runat="server" Width="85px"></asp:TextBox>
+                                            </td>
+                                            <td>
+                                                <asp:ImageButton ID="ImageButtonBuscar" runat="server"
+                                                    ImageUrl="~/imagenes/imagenes_CompraOnline/serch_btn.png" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="style15">&nbsp;</td>
+                                            <td class="style16">&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                    </table>
+                                    <div style="border-bottom: thick hidden #FFCC00; height: 20px; color: #FFFFFF; font-weight: bold; text-align: center; font-size: medium; border-left-color: #FFCC00; border-right-color: #FFCC00; border-top-color: #FFCC00; visibility: visible; border-bottom-style: solid;">
+                                        SECCIONES
+                                    </div>
+                                    <div>
+                                        <asp:TreeView ID="TreeView1" runat="server" Height="164px" Width="175px"
+                                            Font-Bold="True" ForeColor="White" ImageSet="Arrows" Font-Size="X-Small"
+                                            Font-Strikeout="False" Font-Underline="False" NodeWrap="True"
+                                            Style="margin-right: 0px" ExpandDepth="1">
+                                            <ParentNodeStyle Font-Bold="False" />
+                                            <HoverNodeStyle Font-Underline="True" ForeColor="Black" BorderColor="#CC0000" />
+                                            <SelectedNodeStyle Font-Underline="True" ForeColor="#FFFF66"
+                                                HorizontalPadding="0px" VerticalPadding="0px" />
+                                            <Nodes>
+                                                <asp:TreeNode Text="SECCION-1" Value="SECCION-1">
+                                                    <asp:TreeNode Text="SUB-Seccion-1.1" Value="SUB-Seccion-1.1"></asp:TreeNode>
+                                                    <asp:TreeNode Text="SUB-Seccion-1.2" Value="SUB-Seccion-1.2"></asp:TreeNode>
+                                                    <asp:TreeNode Text="SUB-Seccion-1.3" Value="SUB-Seccion-1.3"></asp:TreeNode>
+                                                </asp:TreeNode>
+                                                <asp:TreeNode Text="SECCION-2" Value="SECCION-2">
+                                                    <asp:TreeNode Text="SUB-Seccion-2.1" Value="SUB-Seccion-2.1"></asp:TreeNode>
+                                                    <asp:TreeNode Text="SUB-Seccion-2.2" Value="SUB-Seccion-2.2"></asp:TreeNode>
+                                                    <asp:TreeNode Text="SUB-Seccion-2.3" Value="SUB-Seccion-2.3"></asp:TreeNode>
+                                                </asp:TreeNode>
+                                                <asp:TreeNode Text="SECCION-3" Value="SECCION-3">
+                                                    <asp:TreeNode Text="SUB-Seccion-3.1" Value="SUB-Seccion-3.1"></asp:TreeNode>
+                                                    <asp:TreeNode Text="SUB-Seccion-3.2" Value="SUB-Seccion-3.2"></asp:TreeNode>
+                                                    <asp:TreeNode Text="SUB-Seccion-3.3" Value="SUB-Seccion-3.3"></asp:TreeNode>
+                                                </asp:TreeNode>
+                                            </Nodes>
+                                            <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="White"
+                                                HorizontalPadding="5px" NodeSpacing="0px" VerticalPadding="0px" />
+                                        </asp:TreeView>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </td>
+                    <td class="style5">
+                        <table style="width: 100%; height: 690px;">
+                            <tr>
+                                <td class="style17" style="background-color: #FFCC00">
+                                    <div style="height: 47px; width: 828px">
+                                        &nbsp;&nbsp; Nuevo Pedido - 
+                                <asp:Label ID="LabelDireccion" runat="server" Text="---aqui iria direccion cliente--"></asp:Label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style18" style="overflow: auto; background-color: #FFFFF5;">
+                                    <div style="height: 495px; width: 887px; overflow: scroll;">
+                                        <asp:ContentPlaceHolder ID="centro" runat="server">
+                                        </asp:ContentPlaceHolder>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="background-color: #99CC99">
+                                    <div style="height: 68px; text-align: center;">
+                                        <asp:Image ID="Image2" runat="server" ImageUrl="~/imagenes/imagenes_CompraOnline/imgfondo.png" />
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class="style21">
+                        <div style="border-top: medium hidden #FFCC00; height: 682px; border-left-color: #FFCC00; border-right-color: #FFCC00; border-bottom-color: #FFCC00; margin-top: 0px; border-left-width: medium; border-right-width: medium; border-bottom-width: medium; width: 166px; margin-left: 1px; border-top-style: solid;">
+
+                            <div style="border-bottom: 4px inset #000000; height: 15px;"></div>
+                            <div>
+                                <div style="height: 31px; font-weight: bold; color: #FFFFFF; text-align: center; font-size: small;">
+                                    <div style="font-size: x-large; height: 30px;">
+                                        902 113 177
+                                    </div>
+                                    <div>
+                                        Horario: 9-21'30h de L. a S.      
+                            <div id="ticket" runat="server" style="background-color: #FFCC00; color: black; position: relative; float: left; width: 200px; border: 3px solid black; margin-left: -10px">
+                                <span style="color: black; font-size: 15px">Ticket actual</span><br />
+                                <hr />
+                                <%--<span style="font-size: 900">....aqui control usuario carrito....</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--%>
+                                <br />
+                            </div>
+                                    </div>
+                                    <asp:Image ID="Image3" runat="server" ImageUrl="~/imagenes/imagenes_CompraOnline/recomendacionBajoCarrito.png" Width="161px" />
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+            </table>
+        </div>
+        <%--<asp:TextBox ID="seguimientoTextBox" runat="server" Height="200px" TextMode="MultiLine" Width="634px"></asp:TextBox>--%>
+    </form>
+</body>
+</html>
