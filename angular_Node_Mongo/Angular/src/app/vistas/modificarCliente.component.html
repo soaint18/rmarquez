@@ -1,0 +1,121 @@
+<div class="cabecera">
+    <div class="container">
+        <div class="col-md-12 col-xs-12">
+            <h2>Tus datos de Registro</h2>
+        </div>
+    </div>
+</div>
+    
+<div class="container">
+    <div class="col-md-8 col-md-offset-2 well">
+        <form [formGroup]="miformulario" (ngSubmit)="guardarUsuario()">
+            <table>
+                <fieldset><h4><strong><u>Datos Personales</u></strong></h4></fieldset>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="form-group">
+                            <label for="txtNombre">Nombre:</label>
+                            <input type="text" class="form-control" id="txtNombre" [(ngModel)]="usuario.nombre" formControlName="nombre" disabled>
+                            <div *ngIf="miformulario.controls['nombre'].errors?.required && miformulario.controls['nombre'].touched" class="text-danger">
+                                <small>Campo obligatorio. Rellena el nombre.</small>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="col-md-4">
+                        <div class="form-group">
+                            <label for="txtApellidos">Apellidos:</label>
+                            <input type="text" class="form-control" id="txtApellidos" [(ngModel)]="usuario.apellidos" formControlName="apellidos">
+                            <div *ngIf="miformulario.controls['apellidos'].errors?.required && miformulario.controls['apellidos'].touched" class="text-danger">
+                                <small>Campo obligatorio. Rellena los apellidos.</small>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="form-group">
+                            <label for="txtEmail">Correo electronico:</label>
+                            <input type="email" class="form-control" id="txtEmail" [(ngModel)]="usuario.email" formControlName="email">
+                            <div *ngIf="miformulario.controls['email'].errors?.required && miformulario.controls['email'].touched" class="text-danger">
+                                <small>Campo obligatorio. Introduce un email.</small>
+                            </div>
+                            <div *ngIf="miformulario.controls['email'].errors?.pattern" class="text-danger">
+                                <small>Debe tener formato: default@email.org.</small>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="col-md-4">
+                        <div class="form-group">
+                            <label for="txtPassword">Contraseña:</label>
+                            <input type="text" class="form-control" id="txtPassword" [(ngModel)]="usuario.password" formControlName="password">
+                            <div *ngIf="miformulario.controls['password'].errors?.required && miformulario.controls['password'].touched" class="text-danger">
+                                <small>Campo obligatorio. Rellena la contraseña.</small>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="col-md-8">
+                        <div class="form-group">
+                            <label for="txtDirec">Direccion:</label>
+                            <input type="text" class="form-control" id="txtDirec" [(ngModel)]="usuario.direccion" formControlName="direccion">
+                            <div *ngIf="miformulario.controls['direccion'].errors?.required && miformulario.controls['direccion'].touched" class="text-danger">
+                                <small>Campo obligatorio. Rellena la direccion.</small>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="form-group">
+                            <label for="txtTlfno">Telefono:</label>
+                            <input type="text" class="form-control" id="txtTlfno" [(ngModel)]="usuario.tlfno" formControlName="tlfno">
+                            <div *ngIf="miformulario.controls['tlfno'].errors?.required && miformulario.controls['tlfno'].touched" class="text-danger">
+                                <small>Campo obligatorio. Rellena el telefono.</small>
+                            </div>
+                            <div *ngIf="miformulario.controls['tlfno'].errors?.pattern" class="text-danger">
+                                <small>Introduce el telefono sin código pais. (9 digitos).</small>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="col-md-4">
+                        <div class="form-group">
+                            <label for="txtCP">Codigo Postal:</label>
+                            <input type="text" class="form-control" id="txtCP" [(ngModel)]="usuario.cp" formControlName="cp">
+                            <div *ngIf="miformulario.controls['cp'].errors?.required && miformulario.controls['cp'].touched" class="text-danger">
+                                <small>Campo obligatorio. Rellena el Codigo Postal.</small>
+                            </div>
+                            <div *ngIf="miformulario.controls['cp'].errors?.pattern" class="text-danger">
+                                <small>El código postal consta de 5 digitos.</small>
+                            </div>
+                        </div>            
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="form-group">
+                            <label for="txtProv">Provincia:</label>
+                            <input type="text" class="form-control" id="txtProv" [(ngModel)]="usuario.provincia" formControlName="provincia">
+                            <div *ngIf="miformulario.controls['provincia'].errors?.required && miformulario.controls['provincia'].touched" class="text-danger">
+                                <small>Campo obligatorio. Rellena la provincia.</small>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="col-md-4">
+                        <div class="form-group">
+                            <label for="txtLoc">Localidad:</label>
+                            <input type="text" class="form-control" id="txtLoc" [(ngModel)]="usuario.localidad" formControlName="localidad">
+                            <div *ngIf="miformulario.controls['localidad'].errors?.required && miformulario.controls['localidad'].touched" class="text-danger">
+                                <small>Campo obligatorio. Rellena la localidad.</small>
+                            </div>
+                        </div>            
+                    </td>
+                </tr>
+                <hr>
+            </table>
+            <div class="col-md-12 text-center"> 
+                <button class="btn btn-primary" [disabled]="!miformulario.valid">Guardar Cambios</button> 
+            </div>
+        </form>
+    </div>
+</div>

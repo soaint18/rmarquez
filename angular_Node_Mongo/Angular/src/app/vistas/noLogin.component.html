@@ -1,0 +1,32 @@
+<div class="cabecera">
+    <div class="container">
+        <div class="col-md-12 col-xs-12">
+            <h2>Usuario no encontrado</h2>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="col-md-6 col-md-offset-1 well text-center">
+        <h4><strong>Usuario o contraseña incorrecta.</strong></h4>
+        <p>Vuelve a intentarlo o registrate si aun no lo has hecho.</p><br>
+        <a class="btn btn-primary"  (click)="goLogin()" >Volver</a>
+    </div>
+
+    
+      
+    <div  class="col-md-3 col-xs-2 col-md-offset-1 well text-center">
+        <h4><strong>¿Aún no eres usuario?</strong></h4>
+        <p>Antes de empezar dinos quién eres</p><br>
+        <p><strong>Soy un particular</strong></p>
+        <img class="img-responsive center-block" src="../../assets/imagenes/loginUsuario/noob.png" /><br>
+        <a class="btn btn-xs btn-primary"  (click)="goRegistro()" >quiero presupuestos</a>
+        <hr>
+        <p><strong>Soy un profesional</strong></p>
+        <img class="img-responsive center-block" src="../../assets/imagenes/loginUsuario/pro.png" /><br>
+        <a class="btn btn-xs btn-primary" (click)="goEmpresa()">quiero trabajos</a>
+    </div>
+
+
+</div>

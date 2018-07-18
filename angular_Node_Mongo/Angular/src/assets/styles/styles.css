@@ -1,0 +1,14 @@
+.cabecera { 
+    background-color: rgb(140, 193, 82);
+    color: white;
+    margin-bottom: 20px;
+}
+
+.lapiz {
+    width:20%; 
+    vertical-align:top;
+}
+
+.linkbarra li a {
+    font-size: 70%;
+}

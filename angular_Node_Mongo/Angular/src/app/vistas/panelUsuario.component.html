@@ -1,0 +1,58 @@
+<div class="cabecera">
+    <div class="container">
+        <div class="col-md-12 col-xs-12">
+            <h2>Panel Usuario</h2>
+        </div>
+    </div>
+</div>
+    
+<div class="container">
+    <div class="col-md-8 col-xs-2 well text-center">
+        <h3><strong><u>Mis Reformas</u></strong></h3>
+        <table border="1">
+            <tr>
+                <th class="col-md-3">Trabajo</th>
+                <th class="col-md-3">Tipo</th>
+                <th class="col-md-1">Empresa</th>
+                <th class="col-md-1">Presupuesto</th>
+            </tr>
+            <tr *ngFor="let reforma of reformas;">
+                <td>{{reforma.descripcion}}</td>
+                <td>{{reforma.tipo}}</td>
+                <td>{{reforma.empresa}}</td>
+                <td>{{reforma.presupuesto}}</td>
+            </tr>
+        </table>
+
+    </div>
+
+    <div  class="col-md-3 col-xs-2 col-md-offset-1 well text-center">
+        <table>
+            <tr>
+                <td colspan="2"><h4><strong>Nueva reforma</strong></h4></td>
+            </tr>
+            <tr>
+                <div>
+                    <a [routerLink]="['/registrareforma']" class="btn btn-success">Nueva</a>
+                </div>
+            </tr><br>
+            <tr>
+                <td colspan="2"><h4><strong>Modificar mis datos</strong></h4></td>
+            </tr>
+            <tr>
+                <div>
+                    <a [routerLink]="['/modificarcliente']" class="btn btn-success">Cambiar</a>
+                </div>
+            </tr><br>
+            <tr>
+                <td colspan="2"><h4><strong>Cerrar Sesion</strong></h4></td>
+            </tr>
+            <tr>
+                <div>
+                    <button class="btn btn-success" (click)="logout()">Logout</button>
+                </div>
+            </tr><br>
+        
+        </table>
+    </div>
+</div>

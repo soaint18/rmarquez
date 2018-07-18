@@ -1,0 +1,47 @@
+<div class="cabecera">
+        <div class="container">
+            <div class="col-md-12 col-xs-12">
+                <h2>Nueva Reforma</h2>
+            </div>
+        </div>
+</div>
+        
+<div class="container">
+    <div class="col-md-8 col-xs-2 col-md-offset-2 well">
+        <form [formGroup]="miformulario" (ngSubmit)="guardarReforma()">
+            <table>
+                
+                <fieldset><h4><strong><u>Datos Reforma</u></strong></h4></fieldset>
+                <tr>
+                    <td colspan="2" class="col-md-8">
+                        <div class="form-group">
+                            <label for="txtDirec">Tipo de reforma:</label>
+                            <select class="form-control" formControlName="tipo">
+                                <option *ngFor="let tipo of tiposReforma" [value]="tipo">{{tipo}}</option>
+                            </select>
+                            <div *ngIf="miformulario.controls['tipo'].errors?.required && miformulario.controls['tipo'].touched" class="text-danger">
+                                <small>Campo obligatorio. Selecciona el tipo de reforma.</small>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="col-md-8">
+                        <div class="form-group">
+                            <label for="txtDirec">Descripcion de la reforma:</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" style="resize:none" formControlName="descripcion"></textarea>
+                            <div *ngIf="miformulario.controls['descripcion'].errors?.required && miformulario.controls['descripcion'].touched" class="text-danger">
+                                <small>Campo obligatorio. Introduce una descripcion de la reforma.</small>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <div class="col-md-12 text-center"> 
+                <button class="btn btn-primary" [disabled]="!miformulario.valid">Añadir</button> 
+            </div>
+        </form>
+    </div>
+</div>
+
+    

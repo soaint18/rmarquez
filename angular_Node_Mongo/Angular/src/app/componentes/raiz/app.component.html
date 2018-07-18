@@ -1,0 +1,45 @@
+<!-- Barra de navegacion -->
+<nav class="navbar navbar-expand-lg"> <!-- navbar-default -->
+  <div class="container-fluid">
+    <table width="70%" style="margin:auto">
+      <tr>
+        <td>
+          <div class="navbar-header">
+            <a class="navbar-brand" [routerLink]="['/home']">
+              <img src="../../../assets/imagenes/raiz/logo10a.png">
+            </a>
+          </div>
+        </td>
+        <td>
+          <div class="pull-right">
+            <!-- <a href="#" class="btn btn-xs btn-danger">Registra tu Empresa</a> -->
+            <a [routerLink]="['/logincliente']" class="btn btn-xs btn-success" (click)="login()" >Login/Logout</a>
+          </div><br>
+        </td>
+      </tr>
+      <!--   
+      <tr>    
+        <td colspan="2">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span> 
+              </button>
+            <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right linkbarra">           
+            <li><a [routerLink]="['/registrocliente']">PEDIR PRESUPUESTO</a></li>
+            <li><a href="#">TRABAJOS</a></li>
+            <li><a href="#">EMPRESAS</a></li>
+            <li><a href="#">PRECIOS</a></li>
+            <li><a href="#">FOTOS</a></li>
+            <li><a href="#">COMO FUNCIONA</a></li>
+          </ul>
+            </div>
+        </td>
+      </tr>
+      -->
+    </table>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

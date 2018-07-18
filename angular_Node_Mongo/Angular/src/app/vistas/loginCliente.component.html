@@ -1,0 +1,51 @@
+<div class="cabecera">
+    <div class="container">
+        <div class="col-md-12 col-xs-12">
+            <h2>!Bienvenido de nuevo¡</h2>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="col-md-6 col-xs-2 col-md-offset-1 well">
+        <form [formGroup]="miformulario" (ngSubmit)="vaidarUsuario()" class="form-inline">
+            <div class="content row col-10">   
+                <div class="form-group col-md-6">
+                    <label>Tu Correo electrónico</label>
+                    <div>
+                        <input class="form-control" type="text" placeholder="Correo" name="email" formControlName="email" required>
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label>Contraseña</label>
+                    <div class="col-5">
+                        <input class="form-control" type="password" placeholder="Contraseña" name="password" formControlName="password" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row text-center col-10">
+                    <br>
+                <button type="submit" class="btn btn-primary" [disabled]="!miformulario.valid">
+                    Entrar
+                </button>
+            </div>
+            
+        </form>
+    </div>
+
+    <div  class="col-md-3 col-xs-2 col-md-offset-1 well text-center">
+        <h4><strong>¿Aún no eres usuario?</strong></h4>
+        <p>Antes de empezar dinos quién eres</p><br>
+        <p><strong>Soy un particular</strong></p>
+        <img class="img-responsive center-block" src="../../assets/imagenes/loginUsuario/noob.png" /><br>
+        <a class="btn btn-xs btn-primary"  (click)="goRegistro()" >quiero presupuestos</a>
+        <hr>
+        <p><strong>Soy un profesional</strong></p>
+        <img class="img-responsive center-block" src="../../assets/imagenes/loginUsuario/pro.png" /><br>
+        <a class="btn btn-xs btn-primary" (click)="goEmpresa()">quiero trabajos</a>
+    </div>
+
+
+</div>

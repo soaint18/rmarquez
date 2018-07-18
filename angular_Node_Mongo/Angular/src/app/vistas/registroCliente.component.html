@@ -1,0 +1,180 @@
+<div class="cabecera">
+    <div class="container">
+        <div class="col-md-12 col-xs-12">
+            <h2>Recibe presupuestos gratis y sin compromiso</h2>
+            <p>TuManitas tiene más de 73.354 profesionales esperando a darte sus mejores presupuestos.</p>
+            <p>Más de 158.677 personas ya han usado este servicio.</p>
+        </div>
+    </div>
+</div>
+    
+<div class="container">
+    <div class="col-md-8 col-xs-2 well">
+        <form [formGroup]="miformulario" (ngSubmit)="guardarUsuario()">
+            <table>
+                <fieldset><h4><strong><u>Datos Personales</u></strong></h4></fieldset>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="form-group">
+                            <label for="txtNombre">Nombre:</label>
+                            <input type="text" class="form-control" id="txtNombre" formControlName="nombre">
+                            <div *ngIf="miformulario.controls['nombre'].errors?.required && miformulario.controls['nombre'].touched" class="text-danger">
+                                <small>Campo obligatorio. Rellena el nombre.</small>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="col-md-4">
+                        <div class="form-group">
+                            <label for="txtApellidos">Apellidos:</label>
+                            <input type="text" class="form-control" id="txtApellidos" formControlName="apellidos">
+                            <div *ngIf="miformulario.controls['apellidos'].errors?.required && miformulario.controls['apellidos'].touched" class="text-danger">
+                                <small>Campo obligatorio. Rellena los apellidos.</small>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="col-md-8">
+                        <div class="form-group">
+                            <label for="txtEmail">Correo electronico:</label>
+                            <input type="email" class="form-control" id="txtEmail" formControlName="email">
+                            <div *ngIf="miformulario.controls['email'].errors?.required && miformulario.controls['email'].touched" class="text-danger">
+                                <small>Campo obligatorio. Introduce un email.</small>
+                            </div>
+                            <div *ngIf="miformulario.controls['email'].errors?.pattern" class="text-danger">
+                                <small>Debe tener formato: default@email.org.</small>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="col-md-8">
+                        <div class="form-group">
+                            <label for="txtDirec">Direccion:</label>
+                            <input type="text" class="form-control" id="txtDirec" formControlName="direccion">
+                            <div *ngIf="miformulario.controls['direccion'].errors?.required && miformulario.controls['direccion'].touched" class="text-danger">
+                                <small>Campo obligatorio. Rellena la direccion.</small>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="form-group">
+                            <label for="txtTlfno">Telefono:</label>
+                            <input type="text" class="form-control" id="txtTlfno" formControlName="tlfno">
+                            <div *ngIf="miformulario.controls['tlfno'].errors?.required && miformulario.controls['tlfno'].touched" class="text-danger">
+                                <small>Campo obligatorio. Rellena el telefono.</small>
+                            </div>
+                            <div *ngIf="miformulario.controls['tlfno'].errors?.pattern" class="text-danger">
+                                <small>Introduce el telefono sin código pais. (9 digitos).</small>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="col-md-4">
+                        <div class="form-group">
+                            <label for="txtCP">Codigo Postal:</label>
+                            <input type="text" class="form-control" id="txtCP" formControlName="cp">
+                            <div *ngIf="miformulario.controls['cp'].errors?.required && miformulario.controls['cp'].touched" class="text-danger">
+                                <small>Campo obligatorio. Rellena el Codigo Postal.</small>
+                            </div>
+                            <div *ngIf="miformulario.controls['cp'].errors?.pattern" class="text-danger">
+                                <small>El código postal consta de 5 digitos.</small>
+                            </div>
+                        </div>            
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="form-group">
+                            <label for="txtProv">Provincia:</label>
+                            <input type="text" class="form-control" id="txtProv" formControlName="provincia">
+                            <div *ngIf="miformulario.controls['provincia'].errors?.required && miformulario.controls['provincia'].touched" class="text-danger">
+                                <small>Campo obligatorio. Rellena la provincia.</small>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="col-md-4">
+                        <div class="form-group">
+                            <label for="txtLoc">Localidad:</label>
+                            <input type="text" class="form-control" id="txtLoc" formControlName="localidad">
+                            <div *ngIf="miformulario.controls['localidad'].errors?.required && miformulario.controls['localidad'].touched" class="text-danger">
+                                <small>Campo obligatorio. Rellena la localidad.</small>
+                            </div>
+                        </div>            
+                    </td>
+                </tr>
+                <hr>
+                <fieldset><h4><strong><u>Datos Reforma</u></strong></h4></fieldset>
+                <tr>
+                    <td colspan="2" class="col-md-8">
+                        <div class="form-group">
+                            <label for="txtDirec">Tipo de reforma:</label>
+                            <select class="form-control" formControlName="tipo">
+                                <option *ngFor="let tipo of tiposReforma" [value]="tipo">{{tipo}}</option>
+                            </select>
+                            <div *ngIf="miformulario.controls['tipo'].errors?.required && miformulario.controls['tipo'].touched" class="text-danger">
+                                <small>Campo obligatorio. Selecciona el tipo de reforma.</small>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="col-md-8">
+                        <div class="form-group">
+                            <label for="txtDirec">Descripcion de la reforma:</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" style="resize:none" formControlName="descripcion"></textarea>
+                            <div *ngIf="miformulario.controls['descripcion'].errors?.required && miformulario.controls['descripcion'].touched" class="text-danger">
+                                <small>Campo obligatorio. Introduce una descripcion de la reforma.</small>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        <div class="col-md-12 text-center"> 
+            <button class="btn btn-primary" [disabled]="!miformulario.valid">Registrarse</button> 
+        </div>
+        </form>
+    </div>
+
+    <div  class="col-md-3 col-xs-2 col-md-offset-1 well">
+        <table>
+            <tr>
+                <td colspan="2"><h4><strong>¿Qué ocurre después?</strong></h4></td>
+            </tr><br>
+            <tr>
+                <td class="lapiz">
+                    <img class="img-responsive center-block" src="../../assets/imagenes/registroUsuario/lapiz.png"/><br>
+                </td>
+                <td>
+                    <p><strong>¿Necesitas un manitas?</strong></p>
+                    <p>Rellenando este formulario publicarás un trabajo en TuManitas y ahorrarás comparando presupuestos de los profesionales. De media, recibirás tu primer presupuesto en menos de 20 minutos después de la publicación.</p>
+                </td>
+            </tr><br>
+            <tr>
+                <td class="lapiz">
+                    <img class="img-responsive center-block" src="../../assets/imagenes/registroUsuario/llave.png" /><br>
+                </td>
+                <td>
+                    <p>Los profesionales de tu provincia te ofrecerán presupuestos a través de la web. Cada día recibirás un email resumen de todos los presupuestos.</p>
+                </td>
+            </tr><br>
+            <tr>
+                <td class="lapiz">
+                    <img class="img-responsive center-block" src="../../assets/imagenes/registroUsuario/lupa.png" /><br>
+                </td>
+                <td>
+                    <p>Podrás <b>ver</b> quién se ha interesado por tu trabajo, <b>comparar</b> sus valoraciones y decidir si quieres (o no) contratar a alguno.</p>
+                </td>
+            </tr><br>
+            <tr>
+                <td class="lapiz">
+                    <img class="img-responsive center-block" src="../../assets/imagenes/registroUsuario/candado.png" /><br>
+                </td>
+                <td>
+                    <p>Puedes estar tranquilo. Tus datos de contacto <b>nunca se mostrarán</b> en la web. <b>¡Máxima privacidad garantizada!</b></p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
